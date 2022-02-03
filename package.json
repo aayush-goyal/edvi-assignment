@@ -1,0 +1,49 @@
+{
+	"name": "edvi",
+	"version": "1.0.0",
+	"description": "Web project for EdVi.",
+	"homepage": "https://edvi.app",
+	"author": "Aayush Goyal",
+	"main": "index.js",
+	"private": true,
+	"dependencies": {
+		"@emotion/react": "^11.7.1",
+		"@emotion/styled": "^11.6.0",
+		"@mui/material": "^5.4.0",
+		"axios": "0.25.0",
+		"next": "10.1.3",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-spring": "^9.1.0",
+		"typescript": "^4.1.3"
+	},
+	"scripts": {
+		"dev": "node server.js",
+		"build": "next build",
+		"start": "NODE_ENV=production node server.js",
+		"lint": "eslint . --ext .ts",
+		"lint-and-fix": "eslint . --ext .ts --fix",
+		"prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write"
+	},
+	"devDependencies": {
+		"@types/node": "^14.14.37",
+		"@types/react": "^17.0.3",
+		"@typescript-eslint/eslint-plugin": "^4.28.1",
+		"@typescript-eslint/parser": "^4.28.1",
+		"eslint": "^7.30.0",
+		"eslint-config-airbnb": "^18.2.1",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.23.4",
+		"eslint-plugin-jsx-a11y": "^6.4.1",
+		"eslint-plugin-prettier": "^3.4.0",
+		"eslint-plugin-react": "^7.24.0",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"husky": "^7.0.1",
+		"prettier": "^2.3.2"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "yarn run prettier-format && yarn run lint"
+		}
+	}
+}
